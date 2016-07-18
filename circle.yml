@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 6.2.0
+test:
+  override:
+    - "npm run lint & npm run test"
+  pre:
+    - "npm run cover"
+deployment:
+  development:
+    branch: master
+    commands:
+      - "bash <(curl -s https://codecov.io/bash) -t 848d5d88-7aa8-4696-ac17-761abbea8ebd"
