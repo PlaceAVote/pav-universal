@@ -7,7 +7,7 @@ import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 import rootReducer from './reducers/index';
 import routes from './routes.jsx';
-import style from '../scss/styles.scss';
+import '../scss/styles.scss';
 
 const loggerMiddleware = createLogger();
 
