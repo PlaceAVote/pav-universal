@@ -16,7 +16,7 @@ describe('Hero:Components', () => {
   });
   it('should set subtitle in props to subtitle', () => {
     const wrapper = shallow(<HeroComponent subtitle='Be Loud' />);
-    expect(wrapper.find('h2')).to.have.length(1);
-    expect(wrapper.find('h2').text()).to.eql('Be Loud');
+    expect(wrapper.find('h4')).to.have.length(1);
+    expect(wrapper.find('h4').text()).to.eql('Be Loud');
   });
 });
