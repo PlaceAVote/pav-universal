@@ -19,6 +19,7 @@ function renderFullPage(html, initialState) {
       <head>
         <meta charset="utf-8" />
         <title>Redux Universal Example</title>
+        <link type="text/css" rel="stylesheet" href="dist/main.css" />
       </head>
       <body>
         <div id="root-app">${html}</div>

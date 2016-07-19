@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const mainPath = path.resolve('./src');
 const buildPath = path.resolve('./dist');
@@ -21,11 +22,23 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ['babel-loader'],
-      }
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
+      },
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, './scss')],
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin('[name].css'),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.MinChunkSizePlugin({ minChunkSize: 10000 }),
     new webpack.DefinePlugin({
