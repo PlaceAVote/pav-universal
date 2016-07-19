@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const mainPath = path.resolve('./src');
 const buildPath = path.resolve('./dist');
@@ -27,9 +28,13 @@ module.exports = {
         loaders: ['react-hot', 'babel-loader'],
       },
       {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+      },
+      {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'],
-      }
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
+      },
     ]
   },
   sassLoader: {
@@ -38,6 +43,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin('[name].css'),
   ],
   devtool: 'inline-source-map',
   devServer: {
