@@ -19,6 +19,15 @@ function renderFullPage(html, initialState) {
       <head>
         <meta charset="utf-8" />
         <title>Redux Universal Example</title>
+        <style>
+          div, h1, h2, p, button {
+            font-family: "Whitney-Book", "Arial", "sans-serif";
+          }
+          body, div {
+            margin: 0;
+            padding: 0;
+          }
+        </style>
       </head>
       <body>
         <div id="root-app">${html}</div>
@@ -65,6 +74,7 @@ function handleRender(req, res) {
 
 // Register static assets to serve from server.
 app.use('/dist', express.static(`${__dirname}/dist`));
+app.use('/images', express.static(`${__dirname}/images`));
 // Register middleware.
 app.use(logger('combined'));
 app.use(handleRender);

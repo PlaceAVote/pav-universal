@@ -1,3 +1,12 @@
-// Define any application specific (inc. behavioural) containers
-// for example, a container for pages or elements that inject data
-// and behavour into the visual aspects you define in a component.
+import React from 'react';
+import HomeBanner from './home/Banner.jsx';
+
+const Home = () => {
+  return (
+    <div>
+    <HomeBanner />
+    </div>
+  );
+};
+
+export default Home;
