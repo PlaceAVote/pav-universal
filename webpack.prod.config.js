@@ -21,8 +21,15 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ['babel-loader'],
-      }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
+      },
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, './scss')],
   },
   plugins: [
     new webpack.NoErrorsPlugin(),

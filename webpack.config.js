@@ -25,8 +25,15 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ['react-hot', 'babel-loader'],
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, './scss')],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
