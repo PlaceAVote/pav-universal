@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-const bannerStyle = {
+const heroStyle = {
   width: '100%',
   minHeight: '550px',
   backgroundSize: '100%',
@@ -8,20 +8,20 @@ const bannerStyle = {
   color: '#FFFFFF',
 };
 
-const Banner = ({ img, title, subtitle }) => {
-  bannerStyle.backgroundImage = `url(${img})`;
+const Hero = ({ img, title, subtitle }) => {
+  heroStyle.backgroundImage = `url(${img})`;
   return (
-    <div style={ bannerStyle }>
+    <div style={ heroStyle }>
     <h1>{ title }</h1>
     <h2>{ subtitle }</h2>
     </div>
   );
 };
 
-Banner.propTypes = {
+Hero.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   img: PropTypes.string,
 };
 
-export default Banner;
+export default Hero;

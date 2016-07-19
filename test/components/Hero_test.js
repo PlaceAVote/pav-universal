@@ -1,21 +1,21 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import BannerComponent from '../../src/components/Banner.jsx';
+import HeroComponent from '../../src/components/Hero.jsx';
 
-describe('Banner:Components', () => {
+describe('Hero:Components', () => {
   it('should set div background to the image in props', () => {
-    const wrapper = shallow(<BannerComponent img='test/route.png' />);
+    const wrapper = shallow(<HeroComponent img='test/route.png' />);
     expect(wrapper.find('div')).to.have.length(1);
     expect(wrapper.find('div').node.props.style.backgroundImage).to.eql('url(test/route.png)');
   });
   it('should set title in props to title', () => {
-    const wrapper = shallow(<BannerComponent title='PlaceAVote' />);
+    const wrapper = shallow(<HeroComponent title='PlaceAVote' />);
     expect(wrapper.find('h1')).to.have.length(1);
     expect(wrapper.find('h1').text()).to.eql('PlaceAVote');
   });
   it('should set subtitle in props to subtitle', () => {
-    const wrapper = shallow(<BannerComponent subtitle='Be Loud' />);
+    const wrapper = shallow(<HeroComponent subtitle='Be Loud' />);
     expect(wrapper.find('h2')).to.have.length(1);
     expect(wrapper.find('h2').text()).to.eql('Be Loud');
   });

@@ -1,10 +1,10 @@
 import React from 'react';
-import HomeBanner from './home/Banner.jsx';
+import HomeHero from './home/Hero.jsx';
 
 const Home = () => {
   return (
     <div>
-    <HomeBanner />
+    <HomeHero />
     </div>
   );
 };
