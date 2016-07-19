@@ -19,15 +19,7 @@ function renderFullPage(html, initialState) {
       <head>
         <meta charset="utf-8" />
         <title>Redux Universal Example</title>
-        <style>
-          div, h1, h2, p, button {
-            font-family: "Whitney-Book", "Arial", "sans-serif";
-          }
-          body, div {
-            margin: 0;
-            padding: 0;
-          }
-        </style>
+        <link type="text/css" rel="stylesheet" href="dist/main.css" />
       </head>
       <body>
         <div id="root-app">${html}</div>

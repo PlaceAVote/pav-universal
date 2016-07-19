@@ -1,0 +1,29 @@
+/**
+* Type
+*/
+h1 {
+	font-family: $semi_bold;
+	@include font-size(32px);
+	@include line-height(35px);
+}
+
+h2.bold {
+	font-family: $semi_bold;
+	@include font-size(26px);
+	@include line-height(35px);
+}
+
+h2 {
+	font-family: $book;
+	@include font-size(26px);
+}
+
+h3 {
+	font-family: $book;
+	@include font-size(22px);
+}
+
+h4 {
+	font-family: $book;
+	@include font-size(18px);
+}

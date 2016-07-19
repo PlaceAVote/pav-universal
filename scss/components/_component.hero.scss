@@ -1,0 +1,32 @@
+/**
+* Hero Component
+* --------------
+* Hero Component is used on
+* the opening page of the website
+* containing a background image,
+* a tag line, and cta's for Register
+* and Login
+*/
+
+.c-hero {
+  padding: 20px;
+  // Temporary bg colour
+  background: $primary;
+}
+
+
+/**
+* Tagline type styling
+*/
+.c-hero h1 {
+  color: $white;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+}
+
+
+/**
+* Second message. Below tagline.
+*/
+.c-hero h4 {
+  color: $white;
+}
