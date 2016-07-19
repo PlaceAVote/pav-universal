@@ -7,6 +7,7 @@ import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 import rootReducer from './reducers/index';
 import routes from './routes.jsx';
+import style from '../scss/styles.scss';
 
 const loggerMiddleware = createLogger();
 
@@ -18,7 +19,7 @@ const store = createStore(
   applyMiddleware(
     thunkMiddleware, // lets us dispatch() functions
     loggerMiddleware // neat middleware that logs actions
-  ),
+  )
 );
 
 match({ history: browserHistory, routes }, (error, redirectLocation, renderProps) => {
