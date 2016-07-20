@@ -1,5 +1,9 @@
 import React, { PropTypes } from 'react';
 
+/**
+ * Inline styles included to help
+ * with above the fold rendering.
+ */
 const heroStyle = {
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
@@ -7,14 +11,16 @@ const heroStyle = {
   color: '#FFFFFF',
 };
 
-const Hero = ({ img, title, subtitle }) => {
+/**
+ * A Visual Hero Component.
+ */
+const Hero = ({ img, title, subtitle, children }) => {
   heroStyle.backgroundImage = `url(${img})`;
   return (
     <div style={ heroStyle } className='c-hero'>
     <h1>{ title }</h1>
     <h4>{ subtitle }</h4>
-    <button className='c-button c-button--green'>Register Now</button>
-    <button className='c-button c-button--blue'>Sign In</button>
+      { children }
     </div>
   );
 };
@@ -23,6 +29,7 @@ Hero.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   img: PropTypes.string,
+  children: PropTypes.element,
 };
 
 export default Hero;
