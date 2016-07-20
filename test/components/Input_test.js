@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import Input from '../../src/components/Input.jsx';
 
-describe('Input', () => {
+describe('Input:Components', () => {
   it('should take in a label', () => {
     const wrapper = shallow(<Input label='test'/>);
     expect(wrapper.find('label').first().text()).to.eql('test');

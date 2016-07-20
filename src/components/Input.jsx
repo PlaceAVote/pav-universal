@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
 import ReactTransition from 'react-addons-css-transition-group';
 
-const Input = ({ label, placeholder, type, validate, error = {} }) => {
-  return (<div>
+const Input = ({ label, placeholder, type, validate = () => {}, error = {} }) => {
+  let input;
+  return (<div className='c-input'>
      <label>{ label }</label>
-     <input type={ type } placeholder={ placeholder } onBlur={ validate }/>
+     <input type={ type } placeholder={ placeholder } onBlur={ () => { validate(input.value); }} ref={n => { input = n; }}/>
       <ReactTransition>
-      <div>
+      <div className='c-input__error'>
         { error.message }
       </div>
       </ReactTransition>
