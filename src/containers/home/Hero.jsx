@@ -18,9 +18,9 @@ const heroSubTitle = `Welcome to PlaceAVote, a nonpartisan platform that gives y
 export const HomeHero = ({ dispatch }) => {
   return (
     <HeroComponent img={ heroImg } title={ heroTitle } subtitle={ heroSubTitle } >
-    <div>
-    <ButtonComponent type='blue' text='Register Now' action={ () => { dispatch(showModal('register')); }} />
-    <ButtonComponent type='green' text='Sign In' action={ () => { dispatch(showModal('signIn')); }}/>
+    <div className="o-row-desktop">
+    <ButtonComponent type='green' text='Register Now' action={ () => { dispatch(showModal('register')); }} />
+    <ButtonComponent type='blue' text='Sign In' action={ () => { dispatch(showModal('signIn')); }}/>
     </div>
     </HeroComponent>
   );

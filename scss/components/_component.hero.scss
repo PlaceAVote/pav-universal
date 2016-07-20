@@ -10,8 +10,9 @@
 
 .c-hero {
   padding: 20px;
-  // Temporary bg colour
-  background: $primary;
+  @include media($desktop) {
+    height: 916px;
+  }
 }
 
 
@@ -22,6 +23,9 @@
   margin: 126px 0px 20px;
   color: $white;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+  @include media($desktop) {
+    margin: 329px 0px 20px;
+  }
 }
 
 
@@ -31,8 +35,21 @@
 .c-hero h4 {
   color: $white;
   margin-bottom: 164px;
+  @include media($desktop) {
+    margin-bottom: 80px;
+  }
 }
 
 .c-hero .c-button--green {
   margin-bottom: 20px;
+  @include media($desktop) {
+    margin-bottom: 0px;
+    margin-right: 20px;
+  }
+}
+
+.c-hero .c-button {
+  @include media($desktop) {
+    width: 290px;
+  }
 }

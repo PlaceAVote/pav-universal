@@ -5,6 +5,9 @@ h1 {
 	@include semi_bold();
 	@include font-size(32px);
 	@include line-height(35px);
+	@include media($desktop) {
+		@include font-size(48px);
+	}
 }
 
 h2.bold {
@@ -27,4 +30,8 @@ h4 {
   @include light();
 	@include font-size(18px);
 	@include line-height(24px);
+	@include media($desktop) {
+		@include font-size(28px);
+		@include line-height(36px);
+	}
 }

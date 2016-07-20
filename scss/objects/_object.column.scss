@@ -1,0 +1,17 @@
+/**
+* Column
+*/
+
+
+.o-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@include media($desktop) {
+  .o-column-desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}

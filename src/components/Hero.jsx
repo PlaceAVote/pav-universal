@@ -18,9 +18,11 @@ const Hero = ({ img, title, subtitle, children }) => {
   heroStyle.backgroundImage = `url(${img})`;
   return (
     <div style={ heroStyle } className='c-hero'>
-    <h1>{ title }</h1>
-    <h4>{ subtitle }</h4>
-      { children }
+      <div className="o-contain-desktop--centered">
+        <h1>{ title }</h1>
+        <h4>{ subtitle }</h4>
+          { children }
+      </div>
     </div>
   );
 };
