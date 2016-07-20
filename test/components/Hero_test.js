@@ -6,7 +6,7 @@ import HeroComponent from '../../src/components/Hero.jsx';
 describe('Hero:Components', () => {
   it('should set div background to the image in props', () => {
     const wrapper = shallow(<HeroComponent img='test/route.png' />);
-    expect(wrapper.find('div')).to.have.length(1);
+    expect(wrapper.find('.c-hero')).to.have.length(1);
     expect(wrapper.find('div').node.props.style.backgroundImage).to.eql('url(test/route.png)');
   });
   it('should set title in props to title', () => {
