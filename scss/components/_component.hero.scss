@@ -19,6 +19,7 @@
 * Tagline type styling
 */
 .c-hero h1 {
+  margin: 126px 0px 20px;
   color: $white;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
 }
@@ -29,4 +30,9 @@
 */
 .c-hero h4 {
   color: $white;
+  margin-bottom: 164px;
+}
+
+.c-hero .c-button--green {
+  margin-bottom: 20px;
 }

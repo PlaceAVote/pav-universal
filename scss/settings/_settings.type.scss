@@ -2,6 +2,36 @@
 * Type
 */
 
-$semi_bold: Whitney-Semibold;
+/**
+* Font Family: Whitney
+*/
+$font: "Whitney SSm A", "Whitney SSm B";
 
-$book: Whitney-Book;
+
+/**
+* Font Weights
+*/
+$font-book: 700;
+$font-normal: 400;
+$font-normalitalic: 400;
+$font-light: 300;
+
+
+
+/**
+* Font Mixins
+*/
+@mixin book() {
+  font-family: $font;
+  font-weight: $font-book;
+}
+
+@mixin semi_bold() {
+  font-family: $font;
+  font-weight: $font-normal;
+}
+
+@mixin light() {
+  font-family: $font;
+  font-weight: $font-light;
+}

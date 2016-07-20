@@ -18,8 +18,11 @@ function renderFullPage(html, initialState) {
     <html>
       <head>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <title>Redux Universal Example</title>
         <link type="text/css" rel="stylesheet" href="dist/main.css" />
+        <link type="text/css" rel="stylesheet" href="//cloud.typography.com/6645674/6646752/css/fonts.css" />
       </head>
       <body>
         <div id="root-app">${html}</div>
