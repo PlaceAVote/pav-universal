@@ -1,7 +1,6 @@
 /**
 * Buttons
 */
-
 .c-button {
   @include font-size(18px);
   @include semi_bold();
@@ -13,26 +12,23 @@
   border: 1px solid $white;
 }
 
+
 /**
 * Modifiers
 */
-
 .c-button {
-
   &--green {
     background: $green;
     &:hover {
       background: lighten($green, 5%);
     }
   }
-
   &--blue {
     background: $accent;
     &:hover {
       background: lighten($accent, 5%);
     }
   }
-
   &--white {
     background: $white;
     color: $accent;
