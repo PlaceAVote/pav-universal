@@ -33,4 +33,12 @@
     }
   }
 
+  &--white {
+    background: $white;
+    color: $accent;
+    border-color: $accent;
+    &:hover {
+      border-color: lighten($accent, 5%);
+    }
+  }
 }
