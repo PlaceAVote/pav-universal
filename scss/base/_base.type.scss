@@ -1,6 +1,11 @@
 /**
 * Type
 */
+
+* {
+	font-family: $font;
+}
+
 h1 {
 	@include semi_bold();
 	@include font-size(32px);
@@ -17,7 +22,7 @@ h2.bold {
 }
 
 h2 {
-	@include book();
+	@include light();
 	@include font-size(26px);
 }
 
@@ -34,4 +39,11 @@ h4 {
 		@include font-size(28px);
 		@include line-height(36px);
 	}
+}
+
+p {
+	@include light();
+	@include font-size(16px);
+	@include line-height(20px);
+	margin: 0;
 }

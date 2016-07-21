@@ -1,0 +1,33 @@
+/**
+* Modal
+*/
+
+.c-modal {
+  width: 100vw;
+  min-height: 100vh;
+  background: $white;
+  z-index: 99999;
+  @include media($tablet) {
+    background: $primary;
+    filter: blur(50px);
+    background-image: radial-gradient(circle at 50% 61%, rgba(255, 255, 255, 0.5), rgba(72, 72, 72, 0.28)), linear-gradient(to right, #4d6eb3, #6b55a0);
+    height: 100vh;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.c-modal__content {
+  padding: 20px;
+  background: $white;
+  @include media($tablet) {
+    max-width: 440px;
+    margin: 100px auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    box-shadow: 0 1px 4px 0 rgba(182, 182, 182, 0.5);
+  }
+}

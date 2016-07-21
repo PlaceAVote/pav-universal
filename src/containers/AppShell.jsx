@@ -11,4 +11,3 @@ AppShell.propTypes = {
 };
 
 export default AppShell;
-
