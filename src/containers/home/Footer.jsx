@@ -9,7 +9,6 @@ const links = [
   {url: '/contact', label: 'Contact'},
 ];
 
-
 export const HomeFooter = ({ dispatch }) => {
 
   return (
