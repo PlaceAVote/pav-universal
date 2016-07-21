@@ -11,7 +11,7 @@ describe('EmailInput:Containers', () => {
 
   it('should have label of Email', () => {
     const wrapper = shallow(<EmailInput />);
-    expect(wrapper.find('Input').render().text()).to.eql('Email Address');
+    expect(wrapper.find('Input').render().text()).contains('Email Address');
   });
 
   it('should have placeholder of someone@someone.com', () => {
