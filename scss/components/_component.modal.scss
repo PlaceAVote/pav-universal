@@ -6,13 +6,16 @@
   width: 100vw;
   min-height: 100vh;
   background: $white;
+  z-index: 99999;
   @include media($tablet) {
     background: $primary;
     filter: blur(50px);
     background-image: radial-gradient(circle at 50% 61%, rgba(255, 255, 255, 0.5), rgba(72, 72, 72, 0.28)), linear-gradient(to right, #4d6eb3, #6b55a0);
-    position: relative;
     height: 100vh;
     overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 }
 
