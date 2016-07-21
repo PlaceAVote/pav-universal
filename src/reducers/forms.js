@@ -1,5 +1,6 @@
 import * as actionTypes from '../actions/constants.js';
 import emailRegex from '../utils/email_regex.js';
+import zipCodeRegex from '../utils/zip_regex.js';
 
 /**
  * Initial state defining the forms accross the application.
@@ -88,6 +89,20 @@ const validateEmailAddress = (value) => {
   }
 };
 
+/**
+ * Validates a standard email input.
+ * Will return a undefined if object if valid
+ * or an error message if invalid.
+ */
+const validateZipCode = (value) => {
+  if (!zipCodeRegex.test(value)) {
+    return 'Zip Code is not valid';
+  }
+};
+
+/**
+ * Validates an input based on its type and value.
+ */
 const validateInput = (input, action) => {
   switch (input.type) {
     case 'text': {
@@ -95,6 +110,9 @@ const validateInput = (input, action) => {
     }
     case 'email': {
       return validateEmailAddress(action.value);
+    }
+    case 'zip': {
+      return validateZipCode(action.value);
     }
     default: {
       return;

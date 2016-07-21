@@ -81,5 +81,23 @@ describe('Form:Reducers', () => {
       const subject = forms(state, inputEntered({ formId: 'signup', fieldName: 'catName', value: 'toby' }));
       expect(subject.signup.catName.error.message).to.eql('Email Address is not valid');
     });
+
+    it('validates a zip required field returning an error message if invalid', () => {
+      const state = {
+        signup: { meta: { name: 'signup' }, catName: { required: true, type: 'zip', error: {} } },
+      };
+      deepFreeze(state);
+      const subject = forms(state, inputEntered({ formId: 'signup', fieldName: 'catName', value: 'notAZip' }));
+      expect(subject.signup.catName.error.message).to.eql('Zip Code is not valid');
+    });
+
+    it('validates a zip required field returning an error message if valid', () => {
+      const state = {
+        signup: { meta: { name: 'signup' }, catName: { required: true, type: 'zip', error: {} } },
+      };
+      deepFreeze(state);
+      const subject = forms(state, inputEntered({ formId: 'signup', fieldName: 'catName', value: '90210' }));
+      expect(subject.signup.catName.error.message).to.eql(undefined);
+    });
   });
 });

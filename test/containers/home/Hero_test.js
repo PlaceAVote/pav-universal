@@ -10,32 +10,19 @@ describe('HeroBanner:Containers:Home', () => {
     expect(wrapper.find('Button')).to.have.length(2);
   });
 
-  it('should dispatch an action when Register Button is Click to show Register Modal', () => {
-    let calledAction;
-    const mockDispatch = (action) => {
-      calledAction = action;
+  it('should change page to signup when signup button is pressed', () => {
+    let calledBrowser;
+    const mockHistory = {
+      push: () => {
+        calledBrowser = true;
+      },
     };
-    const wrapper = mount(<HomeHero dispatch={ mockDispatch }/>);
+    const wrapper = mount(<HomeHero history={ mockHistory }/>);
     const registerButton = wrapper.find('Button').first();
     registerButton.simulate('click', registerButton);
-    expect(calledAction).to.not.eql(undefined);
-    expect(calledAction.type).to.eql('SHOW_MODAL');
-    expect(calledAction.visible).to.eql(true);
-    expect(calledAction.modal).to.eql('register');
+    expect(calledBrowser).to.eql(true);
   });
 
-  it('should dispatch an action when Sign In Button is Click to show Sign In Modal', () => {
-    let calledAction;
-    const mockDispatch = (action) => {
-      calledAction = action;
-    };
-    const wrapper = mount(<HomeHero dispatch={ mockDispatch }/>);
-    const signUpButton = wrapper.find('Button').at(1);
-    signUpButton.simulate('click', signUpButton);
-    expect(calledAction).to.not.eql(undefined);
-    expect(calledAction.type).to.eql('SHOW_MODAL');
-    expect(calledAction.visible).to.eql(true);
-    expect(calledAction.modal).to.eql('signIn');
-  });
+  it('should change page when it signin is pressed');
 });
 
