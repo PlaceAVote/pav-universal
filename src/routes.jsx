@@ -25,6 +25,13 @@ export default (
         cb(null, require('./containers/Home.jsx'));
       });
     }}/>
+
+    // Register is a Modal Route
+    <Route path='signup' getComponent={(next, cb) => {
+      require.ensure([], (require) => {
+        cb(null, require('./containers/Signup.jsx'));
+      });
+    }} />;
     // Other Pages.
   </Route>
 );

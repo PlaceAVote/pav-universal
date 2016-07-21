@@ -1,7 +1,11 @@
 import React, { PropTypes } from 'react';
 import ReactTransition from 'react-addons-css-transition-group';
 
-const Input = ({ label, placeholder, type, validate = () => {}, error = {} }) => {
+/**
+ * The Visual Layout for Input fields.
+ * A Validation function can be passed in to trigger on the onBlur event.
+ */
+const Input = ({ label, placeholder, type, validate, error }) => {
   let input;
   return (<div className='c-input'>
      <label>{ label }</label>
@@ -20,6 +24,11 @@ Input.propTypes = {
   type: PropTypes.string,
   error: PropTypes.object,
   validate: PropTypes.func,
+};
+
+Input.defaultProps = {
+  validate: () => {},
+  error: {},
 };
 
 export default Input;

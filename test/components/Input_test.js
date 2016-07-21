@@ -25,6 +25,12 @@ describe('Input:Components', () => {
     expect(wrapper.find('input').first().props().type).to.eql('test');
   });
 
+  it('should not break when validate is called but not defined', () => {
+    const wrapper = mount(<Input type='test'/>);
+    wrapper.find('input').first().simulate('blur');
+    expect(wrapper.find('input').first().props().type).to.eql('test');
+  });
+
   it('should take a validation action for onBlur', () => {
     let called = false;
     const blured = () => {
