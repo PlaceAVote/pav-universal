@@ -3,12 +3,13 @@
 */
 
 .c-input {
-
+  width: 100%;
 }
 
 .c-input label {
   @include font-size(18px);
   color: $darkest_grey;
+  display: inline-block;
   margin: 20px 0px 11px 0px;
 }
 
@@ -20,18 +21,30 @@ input[type="password"] {
   border: 1px solid $grey;
   width: 100%;
   background: $white;
-  @include book();
+  @include light();
   @include font-size(18px);
   color: $darkest_grey;
+  outline: none;
   &:focus {
     border-color: $primary;
   }
 }
 
 .c-input .c-input__error {
-  padding: 11px;
+  padding: 11px 11px 11px 44px;
   width: 100%;
   border: 1px solid $red;
+  border-radius: 3px;
   color: $red;
+  margin-top: 20px;
+  position: relative;
   @include font-size(18px);
+}
+
+.c-input .c-input__error img {
+  position: absolute;
+  left: 11px;
+  top: 10px;
+  height: 19px;
+  width: 22px;
 }
