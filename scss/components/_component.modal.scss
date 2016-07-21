@@ -1,0 +1,14 @@
+/**
+* Modal
+*/
+
+.c-modal {
+  width: 100vw;
+  min-height: 100vh;
+  background: $white;
+}
+
+.c-modal__content {
+  padding: 20px;
+  background: $white;
+}
