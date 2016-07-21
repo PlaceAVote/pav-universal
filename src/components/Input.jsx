@@ -8,7 +8,7 @@ const Input = ({ label, placeholder, type, validate = () => {}, error = {} }) =>
      <input type={ type } placeholder={ placeholder } onBlur={ () => { validate(input.value); }} ref={n => { input = n; }}/>
       <ReactTransition>
       <div className='c-input__error'>
-        { error.message }
+        <img src="images/error/error_sign.svg" /> { error.message }
       </div>
       </ReactTransition>
     </div>);
